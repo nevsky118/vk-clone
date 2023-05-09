@@ -11,7 +11,7 @@ export class StorageService {
     const Key = `${path}/${uuidv4()}.${file.originalname.split('.').pop()}`;
 
     const params: S3.PutObjectRequest = {
-      Bucket: `vk-clone`,
+      Bucket: process.env.YANDEX_BUCKET,
       Key,
       Body: file.buffer,
       ContentType: file.mimetype,
@@ -21,6 +21,7 @@ export class StorageService {
       const res = await S3Client.upload(params).promise();
       return res.Location;
     } catch (error) {
+      console.log(error);
       throw new BadRequestException(
         `Произошла ошибка при загрузке файла: ${file.originalname}`,
       );
@@ -31,12 +32,12 @@ export class StorageService {
     if (!file) return;
 
     const Key = file.replace(
-      `https://${`vk-clone`}.storage.yandexcloud.net/`,
+      `https://${process.env.YANDEX_BUCKET}.storage.yandexcloud.net/`,
       '',
     );
 
     const params: S3.DeleteObjectRequest = {
-      Bucket: `vk-clone`,
+      Bucket: process.env.YANDEX_BUCKET,
       Key,
     };
 

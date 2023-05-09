@@ -83,7 +83,7 @@ const ProfileActions = () => {
 			const { data } = await createChat({
 				members: [router.query.id as string, user.id],
 			});
-			router.push(`/im/${data.id}`);
+			router.push(`/im`);
 		}
 	};
 

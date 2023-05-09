@@ -158,9 +158,11 @@ export class FriendsService {
   // поиск заявки в друзья
   async findFriendRequest(userId: string, friendId: string): Promise<Friend> {
     const existingFriendRequest = await this.friendModel.findOne({
-      from: userId,
-      to: friendId,
-    });
+      $or: [
+        { from: userId, to: friendId, pending: false },
+        { to: userId, from: friendId, pending: false },
+      ],
+    });	
 
     if (!existingFriendRequest) {
       return null;

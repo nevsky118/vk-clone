@@ -7,7 +7,7 @@ services:
       context: ./client
       dockerfile: Dockerfile
       args:
-        SERVER_URL: http://localhost:${SERVER_PORT}
+        SERVER_URL: http://158.160.104.137:${SERVER_PORT}
     ports:
       - '3000:${CLIENT_PORT:-3000}'
   server:

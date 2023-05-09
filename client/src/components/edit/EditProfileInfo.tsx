@@ -77,7 +77,7 @@ const EditProfileInfo = () => {
 
 	const handleUserUpdate = async (values: FormValues) => {
 		// @ts-ignore
-		const { data } = await updateUser(values);
+		const { data } = await updateUser({...values, id: user?.id});
 
 		reset(data);
 	};
