@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://158.160.104.137",
+      "localStorage": [
+        {
+          "name": "persist:root",
+          "value": "{\"auth\":\"{\\\"accessToken\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmtAdGVzdC5jb20iLCJzdWIiOiI2NDVhNzY1Yjg2M2U3NTM3MzczMWZiMDMiLCJpYXQiOjE2ODM3MjgwMjYsImV4cCI6MTY4MzgxNDQyNn0.M-Jn-LB8HxSEd6aZgpWMkDJS8ULhFxsE1SLeRBDDNfI\\\",\\\"refreshToken\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcmtAdGVzdC5jb20iLCJzdWIiOiI2NDVhNzY1Yjg2M2U3NTM3MzczMWZiMDMiLCJpYXQiOjE2ODM3MjgwMjYsImV4cCI6MTY4NDMzMjgyNn0.ENYA0NNZwYxBaLYpnbsO41Teob8siSligkduIpHWGdM\\\"}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+        }
+      ]
+    }
+  ]
+}
